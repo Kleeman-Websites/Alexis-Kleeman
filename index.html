@@ -46,15 +46,36 @@
       padding: 2rem 1rem;
       background-color: #fafafa;
     }
-    
+
     .gallery-item {
-      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
     }
     
     .gallery-item img {
       max-width: 100%;
       height: auto;
       border-radius: 8px;
+    }
+    
+    .image-wrapper {
+      width: 100%;
+      aspect-ratio: 1 / 1;        /* Square tile */
+      background-color: #F0F0F0;     /* Optional: fallback color */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      border-radius: 8px;
+      border: 2px solid black;
+    }
+    
+    .image-wrapper img {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;        /* Keeps original aspect ratio */
     }
     
     /* On screens 768px and wider, switch to grid layout */
@@ -88,18 +109,23 @@
 
     <section class="gallery">
       <div class="gallery-item">
-        <img src="image1.jpg" alt="Art Title 1" />
+        <div class="image-wrapper">
+          <img src="image1.jpg" alt="Art Title 1" />
+        </div>
         <h3>Art Title 1</h3>
       </div>
       <div class="gallery-item">
-        <img src="image2.jpg" alt="Art Title 2" />
+        <div class="image-wrapper">
+          <img src="image2.jpg" alt="Art Title 2" />
+        </div>
         <h3>Art Title 2</h3>
       </div>
       <div class="gallery-item">
-        <img src="image3.jpg" alt="Art Title 3" />
+        <div class="image-wrapper">
+          <img src="image3.jpg" alt="Art Title 3" />
+        </div>
         <h3>Art Title 3</h3>
       </div>
-      <!-- Add more items as needed -->
     </section>
     
   </main>
