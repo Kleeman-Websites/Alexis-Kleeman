@@ -24,6 +24,20 @@
       text-align: center;
     }
 
+    .center-wrapper {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 80vh; /* Adjust if header/footer are very large */
+      padding: 1rem;
+    }
+
+    .centered-text {
+      max-width: 600px;
+      text-align: center;
+    }
+
     main {
       padding: 2rem;
     }
@@ -36,8 +50,12 @@
   </header>
 
   <main>
-    <h2>Welcome</h2>
-    <p>This is the body content area. Add sections, articles, or anything else you need here.</p>
+    <section class="center-wrapper">
+      <div class="centered-text">
+        <h2>About Me</h2>
+        <p>This is where you put a short biography</p>
+      </div>
+    </section>
   </main>
 
   <footer>
