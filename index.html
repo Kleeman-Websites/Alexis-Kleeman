@@ -38,6 +38,39 @@
     main {
       padding: 2rem;
     }
+
+    .gallery {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      padding: 2rem 1rem;
+      background-color: #fafafa;
+    }
+    
+    .gallery-item {
+      text-align: center;
+    }
+    
+    .gallery-item img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+    
+    /* On screens 768px and wider, switch to grid layout */
+    @media (min-width: 768px) {
+      .gallery {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 2rem;
+        padding: 2rem;
+      }
+    
+      .gallery-item {
+        text-align: center;
+      }
+    }
+    
   </style>
 </head>
 <body>
@@ -47,10 +80,28 @@
   </header>
 
   <main>
+    
     <section class="centered-text">
         <h2>About Me</h2>
         <p>This is where you put a short biography</p>
     </section>
+
+    <section class="gallery">
+      <div class="gallery-item">
+        <img src="image1.jpg" alt="Art Title 1" />
+        <h3>Art Title 1</h3>
+      </div>
+      <div class="gallery-item">
+        <img src="image2.jpg" alt="Art Title 2" />
+        <h3>Art Title 2</h3>
+      </div>
+      <div class="gallery-item">
+        <img src="image3.jpg" alt="Art Title 3" />
+        <h3>Art Title 3</h3>
+      </div>
+      <!-- Add more items as needed -->
+    </section>
+    
   </main>
 
   <footer>
